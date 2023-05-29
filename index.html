@@ -9,7 +9,7 @@
 <!-- Site where I got my idea: https://store.analogue.co/ -->
 <!-- ↑↑↑ DELETE ↑↑↑ -->
 
-<head>
+<head> <!--Window Title/Pic and File Linking-->
      <title>Pokélux</title>
      <link rel="shortcut icon" href="Poke Pics/Pokeball-Icon.ico" />
      <link rel="stylesheet" href="style.css" />
@@ -17,19 +17,19 @@
 </head>
 
 <body>
-     <header>
-          <a href="#"><img src="Poke Pics/Pokeball.png" alt="Logo"></a>
+     <header> <!--Top Screen Banner Section-->
+          <a href="index.html"><img src="Poke Pics/Pokeball.png" alt="Logo"></a>
           <nav>
-               <button href="#"
+               <button href="pokedex.html"
                     onclick="document.querySelector('.row').scrollIntoView({behavior: 'smooth'})">Collections</button>
                <button href="#"
                     onclick="document.querySelector('.Pokelux-Heading').scrollIntoView({behavior: 'smooth'})">About
                     Us</button>
                <button href="#"
-                    onclick="document.querySelector('.footrow').scrollIntoView({behavior: 'smooth'})">Support</button>
+                    onclick="donate()">Support</button>
           </nav>
      </header>
-     <main class="main">
+     <main class="main"> <!--Adjusts the Main Site Body-->
           <section class="Pokelux-Heading">
                <h1>Welcome to <span style="font-style: italic;">Pokélux.</span>
                </h1>
@@ -37,14 +37,26 @@
                     characteristics, evolutions, strengths, and weaknesses of each creature in a sophisticated and
                     elegant setting. Unravel the mysteries of the Pokémon universe with ease and elegance.</p>
           </section>
-          <div class="row">
+
+          <div class="row"> <!--Adjusts Each Row of Info-->
+               <div class="col">
+                    <img src="Poke Pics/Ash.png" alt="Stage 1">
+               </div>
+               <div class="col">
+                    <h2 class="row-title">Pokedex</h2>
+                    <p class="row-desc">Search through our pokedex and look at more specific stats on every pokemon!</p>
+                    <a href="pokedex.html" class="btn">Learn More</a>
+               </div>
+               
+          </div>
+
+          <div class="row"> <!--Adjusts Each Row of Info-->
                <div class="col">
                     <h2 class="row-title">Stage 1 Evolution</h2>
                     <p class="row-desc">Discover the initial evolutions of your favorite Pokémon and immerse yourself in
                          their unique characteristics, strengths, and weaknesses. Our refined digital compendium offers
                          an elegant and comprehensive guide to these budding companions, watching as they grow into
                          powerful allies with ease and grace.</p>
-                    <a href="#" class="btn">Learn More</a>
                </div>
                <div class="col">
                     <img src="Poke Pics/Pikachu.png" alt="Stage 1">
@@ -63,7 +75,6 @@
                          characteristics, strengths, and weaknesses of these formidable companions. Explore the
                          intricacies of their evolution paths and witness their transformation into powerful allies with
                          sophistication and elegance.</p>
-                    <a href="#" class="btn">Learn More</a>
                </div>
           </div>
 
@@ -75,7 +86,6 @@
                          of evolution for your favorite creatures. Discover the unique characteristics, strengths, and
                          weaknesses of these extraordinary companions, witnessing their remarkable transformation into
                          awe-inspiring allies.</p>
-                    <a href="#" class="btn">Learn More</a>
                </div>
                <div class="col">
                     <img src="Poke Pics/Charizard.png" alt="Stage 3" style="width: 65%">
@@ -83,7 +93,7 @@
           </div>
      </main>
 
-     <footer>
+     <footer> <!--Footer of the Website-->
           <div class="fullfoot">
                <div class="footrow">
                     <div class="email">
@@ -99,5 +109,14 @@
           </div>
      </footer>
 </body>
-
+<script>
+     function donate() {
+          let amount = prompt("how much would you like to donate")
+          if (amount > 0) {
+               alert("thank you")
+          } else {
+               alert(`You make me sad`)
+          }
+     }
+</script>
 </html>
